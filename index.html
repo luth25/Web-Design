@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Temukan porter lokal, rencanakan pendakian, dan kenalan dengan komunitas gunung di Malang bersama LangkahRimba."
+    />
+    <meta name="theme-color" content="#f6f5f0" />
+    <title>LangkahRimba — Teman Mendaki dari Malang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#" aria-label="LangkahRimba, beranda">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 36 36" fill="none">
+              <path d="M4 27.5 14.2 11l5.2 8.1 3.2-5.2L32 27.5H4Z" fill="currentColor" />
+              <path d="m11.6 27.5 6.7-10.8 6.6 10.8h-13.3Z" fill="#F6F5F0" />
+              <path d="m8 31 5.2-2.2 4.1 1.4 4.7-2 6 2.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span>langkah<span class="brand-accent">rimba</span></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Navigasi utama">
+          <a href="#gunung">Jelajahi gunung</a>
+          <a href="#cara-kerja">Cara kerja</a>
+          <a href="#komunitas">Komunitas</a>
+        </nav>
+
+        <a class="button button-dark header-cta" href="#gunung">
+          Mulai jelajah <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-image" aria-hidden="true">
+          <span class="hero-slide is-active"></span>
+          <span class="hero-slide"></span>
+        </div>
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> Teman mendaki dari Malang</p>
+            <h1>Langkah kecil.<br />Cerita <span>setinggi langit.</span></h1>
+            <p class="hero-description">
+              Cari porter lokal, temukan teman seperjalanan, dan nikmati setiap langkah menuju puncak.
+            </p>
+            <a class="button button-lime" href="#gunung">
+              Cari gunungmu
+              <span class="button-arrow" aria-hidden="true">↘</span>
+            </a>
+            <div class="hero-social-proof">
+              <div class="avatar-stack" aria-hidden="true">
+                <span>R</span><span>A</span><span>D</span><span>+</span>
+              </div>
+              <p><strong>1.200+</strong> pendaki sudah bergabung</p>
+            </div>
+          </div>
+          <div class="hero-note">
+            <span class="note-icon" aria-hidden="true">✳</span>
+            <span>Jalani alamnya.<br /><strong>Jaga ceritanya.</strong></span>
+          </div>
+          <a class="scroll-cue" href="#gunung" aria-label="Gulir ke pilihan gunung">
+            <span>GULIR UNTUK MENJELAJAH</span><span class="scroll-line"></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="intro-strip" aria-label="Keunggulan LangkahRimba">
+        <div class="container intro-inner">
+          <p>Gunung memanggil, <span>kami bantu persiapkan.</span></p>
+          <div class="trust-points">
+            <span><i aria-hidden="true">✓</i> Porter lokal</span>
+            <span><i aria-hidden="true">✓</i> Harga transparan</span>
+            <span><i aria-hidden="true">✓</i> Teman seperjalanan</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="mountains-section section-pad" id="gunung">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-dot"></span> Pilih tujuanmu</p>
+              <h2>Gunung mana yang<br />memanggilmu?</h2>
+            </div>
+            <p class="section-description">
+              Dari jalur ramah pemula hingga perjalanan yang menantang. Porter lokal siap menemani.
+            </p>
+          </div>
+
+          <div class="explore-toolbar">
+            <div class="filter-tabs" role="group" aria-label="Filter tingkat pendakian">
+              <button class="filter-button is-active" type="button" data-filter="semua">Semua gunung</button>
+              <button class="filter-button" type="button" data-filter="pemula">Ramah pemula</button>
+              <button class="filter-button" type="button" data-filter="menengah">Menengah</button>
+              <button class="filter-button" type="button" data-filter="menantang">Menantang</button>
+            </div>
+            <label class="search-box">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <circle cx="8.8" cy="8.8" r="5.8" stroke="currentColor" stroke-width="1.6" />
+                <path d="m13.2 13.2 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+              <input id="mountain-search" type="search" placeholder="Cari gunung..." aria-label="Cari gunung" />
+            </label>
+          </div>
+
+          <div class="mountain-grid" id="mountain-grid">
+            <article class="mountain-card" data-level="menantang" data-name="semeru">
+              <div class="mountain-photo photo-semeru">
+                <span class="photo-tag">Paling dicari</span>
+                <span class="photo-location"><span aria-hidden="true">⌖</span> Lumajang · akses Malang</span>
+              </div>
+              <div class="mountain-card-body">
+                <div class="mountain-title-row">
+                  <div><h3>Gunung Semeru</h3><p>Mahameru · 3.676 mdpl</p></div>
+                  <span class="level-tag level-hard">Menantang</span>
+                </div>
+                <div class="mountain-meta">
+                  <span><i aria-hidden="true">◷</i> 3–4 hari</span>
+                  <span><i aria-hidden="true">♧</i> Kuota terbatas</span>
+                </div>
+                <div class="card-bottom">
+                  <p>Porter mulai <strong>Rp350.000</strong><small>/hari</small></p>
+                  <button class="icon-button book-button" type="button" data-mountain="Gunung Semeru" aria-label="Booking porter Gunung Semeru">↗</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="mountain-card" data-level="menengah" data-name="arjuno">
+              <div class="mountain-photo photo-arjuno">
+                <span class="photo-tag photo-tag-soft">Favorit pendaki</span>
+                <span class="photo-location"><span aria-hidden="true">⌖</span> Lawang · Malang</span>
+              </div>
+              <div class="mountain-card-body">
+                <div class="mountain-title-row">
+                  <div><h3>Gunung Arjuno</h3><p>Arjuno-Welirang · 3.339 mdpl</p></div>
+                  <span class="level-tag level-mid">Menengah</span>
+                </div>
+                <div class="mountain-meta">
+                  <span><i aria-hidden="true">◷</i> 2–3 hari</span>
+                  <span><i aria-hidden="true">♧</i> Banyak jalur</span>
+                </div>
+                <div class="card-bottom">
+                  <p>Porter mulai <strong>Rp300.000</strong><small>/hari</small></p>
+                  <button class="icon-button book-button" type="button" data-mountain="Gunung Arjuno" aria-label="Booking porter Gunung Arjuno">↗</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="mountain-card" data-level="pemula" data-name="panderman">
+              <div class="mountain-photo photo-panderman">
+                <span class="photo-tag photo-tag-soft">Cocok untuk mulai</span>
+                <span class="photo-location"><span aria-hidden="true">⌖</span> Kota Batu · Malang</span>
+              </div>
+              <div class="mountain-card-body">
+                <div class="mountain-title-row">
+                  <div><h3>Gunung Panderman</h3><p>Puncak Basundara · 2.045 mdpl</p></div>
+                  <span class="level-tag level-easy">Ramah pemula</span>
+                </div>
+                <div class="mountain-meta">
+                  <span><i aria-hidden="true">◷</i> 1 hari</span>
+                  <span><i aria-hidden="true">♧</i> Jalur populer</span>
+                </div>
+                <div class="card-bottom">
+                  <p>Porter mulai <strong>Rp200.000</strong><small>/hari</small></p>
+                  <button class="icon-button book-button" type="button" data-mountain="Gunung Panderman" aria-label="Booking porter Gunung Panderman">↗</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="mountain-card" data-level="menengah" data-name="butak">
+              <div class="mountain-photo photo-butak">
+                <span class="photo-tag photo-tag-soft">Sunrise istimewa</span>
+                <span class="photo-location"><span aria-hidden="true">⌖</span> Batu · Malang</span>
+              </div>
+              <div class="mountain-card-body">
+                <div class="mountain-title-row">
+                  <div><h3>Gunung Butak</h3><p>Puncak Butak · 2.868 mdpl</p></div>
+                  <span class="level-tag level-mid">Menengah</span>
+                </div>
+                <div class="mountain-meta">
+                  <span><i aria-hidden="true">◷</i> 2 hari</span>
+                  <span><i aria-hidden="true">♧</i> Sabana luas</span>
+                </div>
+                <div class="card-bottom">
+                  <p>Porter mulai <strong>Rp250.000</strong><small>/hari</small></p>
+                  <button class="icon-button book-button" type="button" data-mountain="Gunung Butak" aria-label="Booking porter Gunung Butak">↗</button>
+                </div>
+              </div>
+            </article>
+
+            <p class="empty-state" id="empty-state" hidden>Belum ada gunung yang cocok. Coba kata kunci lain, ya.</p>
+          </div>
+          <p class="price-note">*Harga di atas adalah kisaran awal per porter per hari, bukan harga final. Konfirmasi ketersediaan, cakupan jasa, dan biaya terbaru dengan porter serta pengelola jalur sebelum berangkat.</p>
+        </div>
+      </section>
+
+      <section class="how-section section-pad" id="cara-kerja">
+        <div class="container how-layout">
+          <div class="how-intro">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> Gampang kok</p>
+            <h2>Rencana matang,<br />hati tenang.</h2>
+            <p>Persiapkan pendakianmu dengan lebih mudah. Kamu yang pilih tujuan, kami bantu menemukan orang lokal yang tepat.</p>
+            <a class="text-link" href="#gunung">Lihat pilihan gunung <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="steps-list">
+            <article class="step-item">
+              <span class="step-number">01</span>
+              <div><h3>Pilih gunung & tanggal</h3><p>Tentukan tujuan, tanggal pendakian, dan jumlah orang dalam rombonganmu.</p></div>
+              <span class="step-icon" aria-hidden="true">⌖</span>
+            </article>
+            <article class="step-item">
+              <span class="step-number">02</span>
+              <div><h3>Kenalan dengan porter</h3><p>Lihat kisaran harga, lalu kirim permintaan booking langsung ke porter lokal.</p></div>
+              <span class="step-icon" aria-hidden="true">↗</span>
+            </article>
+            <article class="step-item">
+              <span class="step-number">03</span>
+              <div><h3>Berangkat bareng komunitas</h3><p>Tanya jalur, cari teman mendaki, dan berbagi cerita dengan komunitas gunung.</p></div>
+              <span class="step-icon" aria-hidden="true">✳</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="community-section section-pad" id="komunitas">
+        <div class="container">
+          <div class="community-heading">
+            <div>
+              <p class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> Lebih seru kalau bareng</p>
+              <h2>Gunungnya beda,<br />rasa keluarganya sama.</h2>
+            </div>
+            <p>Gabung ke obrolan pendaki lokal. Berbagi info jalur, cari teman satu tujuan, atau sekadar cerita soal gunung.</p>
+          </div>
+          <div class="community-grid">
+            <article class="community-card">
+              <div class="community-art art-semeru"><span class="community-symbol">▲</span><span class="community-members">428 anggota</span></div>
+              <div class="community-card-body"><div><h3>Ruang Semeru</h3><p>Info jalur, kuota &amp; persiapan</p></div><button class="join-button" type="button" data-community="Ruang Semeru">Gabung <span>↗</span></button></div>
+            </article>
+            <article class="community-card">
+              <div class="community-art art-arjuno"><span class="community-symbol">✳</span><span class="community-members">316 anggota</span></div>
+              <div class="community-card-body"><div><h3>Arjuno Bercerita</h3><p>Teman nanjak &amp; kabar jalur</p></div><button class="join-button" type="button" data-community="Arjuno Bercerita">Gabung <span>↗</span></button></div>
+            </article>
+            <article class="community-card">
+              <div class="community-art art-batu"><span class="community-symbol">⌁</span><span class="community-members">194 anggota</span></div>
+              <div class="community-card-body"><div><h3>Anak Gunung Batu</h3><p>Panderman, Butak &amp; sekitarnya</p></div><button class="join-button" type="button" data-community="Anak Gunung Batu">Gabung <span>↗</span></button></div>
+            </article>
+          </div>
+          <p class="community-footnote">Komunitas ini adalah ruang perkenalan di LangkahRimba, bukan grup resmi pengelola gunung.</p>
+        </div>
+      </section>
+
+      <section class="closing-cta">
+        <div class="container closing-inner">
+          <div><p class="eyebrow"><span class="eyebrow-dot"></span> Puncak sudah menunggu</p><h2>Perjalanan hebat<br />dimulai dari <em>satu langkah.</em></h2></div>
+          <a class="button button-dark" href="#gunung">Temukan perjalananmu <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-main">
+          <a class="brand footer-brand" href="#" aria-label="LangkahRimba, kembali ke atas">
+            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M4 27.5 14.2 11l5.2 8.1 3.2-5.2L32 27.5H4Z" fill="currentColor" /><path d="m11.6 27.5 6.7-10.8 6.6 10.8h-13.3Z" fill="#202820" /></svg></span>
+            <span>langkah<span class="brand-accent">rimba</span></span>
+          </a>
+          <p>Teman perjalananmu di alam bebas.</p>
+        </div>
+        <div class="footer-contact">
+          <h2>Hubungi kami</h2>
+          <a id="footer-contact-link" href="https://wa.me/62888888" target="_blank" rel="noopener noreferrer">
+            WhatsApp <span aria-hidden="true">↗</span>
+          </a>
+          <span class="footer-phone">08888888</span>
+        </div>
+        <div class="footer-credit">
+          <span class="footer-copy">© 2026 LangkahRimba · Dibuat dengan hati di Malang</span>
+          <span class="footer-developer">
+            Website dikembangkan oleh
+            <a href="https://luth25.github.io/Portofolio-Luthfi/" target="_blank" rel="noopener noreferrer">Luthfi Pratama</a>
+            &amp;
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">MuhammadFakhrezi</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="booking-dialog" id="booking-dialog" aria-labelledby="dialog-title">
+      <form class="booking-form" id="booking-form">
+        <button class="dialog-close" type="button" aria-label="Tutup formulir">×</button>
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Mulai rencanakan</p>
+        <h2 id="dialog-title">Booking porter</h2>
+        <p class="dialog-intro">Isi rencana awalmu. Permintaan ini belum menjadi booking terkonfirmasi.</p>
+        <label>Gunung yang dituju
+          <select id="booking-mountain" name="mountain" required>
+            <option value="Gunung Semeru">Gunung Semeru</option>
+            <option value="Gunung Arjuno">Gunung Arjuno</option>
+            <option value="Gunung Panderman">Gunung Panderman</option>
+            <option value="Gunung Butak">Gunung Butak</option>
+          </select>
+        </label>
+        <div class="booking-map">
+          <p>Lokasi gunung</p>
+          <iframe
+            id="booking-map-frame"
+            title="Peta lokasi gunung yang dipilih"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="form-row">
+          <label>Tanggal berangkat<input type="date" name="date" id="booking-date" required /></label>
+          <label>Jumlah pendaki<input type="number" name="people" min="1" max="20" value="2" required /></label>
+        </div>
+        <label>Nama customer<input type="text" name="customer" placeholder="Nama kamu" autocomplete="name" required /></label>
+        <button class="button button-dark submit-booking" type="submit">Kirim permintaan <span aria-hidden="true">↗</span></button>
+        <p class="form-message" id="form-message" role="status" hidden></p>
+        <p class="form-disclaimer">Pesan akan disiapkan ke WhatsApp LangkahRimba. Booking belum terkonfirmasi sampai harga dan ketersediaan disepakati dengan porter.</p>
+      </form>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
